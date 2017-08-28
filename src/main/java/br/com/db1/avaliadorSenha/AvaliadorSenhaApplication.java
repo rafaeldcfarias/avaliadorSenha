@@ -14,20 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @SpringBootApplication
-public class AvaliadorSenhaApplication extends WebMvcConfigurerAdapter {
-
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.jsp("/WEB-INF/pages/", ".jsp");
-    }
-
-    @Bean
-    public InternalResourceViewResolver getViewResolver() {
-        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-        internalResourceViewResolver.setViewClass(JstlView.class);
-        return internalResourceViewResolver;
-    }
-
+public class AvaliadorSenhaApplication {
     public static void main(String[] args) {
         SpringApplication.run(AvaliadorSenhaApplication.class, args);
     }

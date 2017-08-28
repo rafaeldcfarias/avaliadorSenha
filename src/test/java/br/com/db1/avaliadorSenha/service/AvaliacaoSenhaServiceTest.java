@@ -1,24 +1,29 @@
 package br.com.db1.avaliadorSenha.service;
 
+import br.com.db1.avaliadorSenha.AvaliadorSenhaApplication;
 import br.com.db1.avaliadorSenha.entity.AvaliacaoSenha;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * Created by rafaeldcfarias on 25/08/17.
  */
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = AvaliadorSenhaApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = AvaliadorSenhaApplication.class)
 public class AvaliacaoSenhaServiceTest {
 
-    //@Autowired
+    @Autowired
     private AvaliacaoSenhaService avaliacaoSenhaService;
 
-    @Before
-    public void prepare() {
-        avaliacaoSenhaService = new AvaliacaoSenhaService();
-    }
+//    @Before
+//    public void prepare() {
+//        avaliacaoSenhaService = new AvaliacaoSenhaService();
+//    }
 
     @Test
     public void pontuacaoDeveSer0_() throws Exception {

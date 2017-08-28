@@ -2,11 +2,9 @@ package br.com.db1.avaliadorSenha.controller;
 
 import br.com.db1.avaliadorSenha.entity.AvaliacaoSenha;
 import br.com.db1.avaliadorSenha.service.AvaliacaoSenhaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -18,6 +16,7 @@ import static org.springframework.http.HttpStatus.OK;
 @RequestMapping("/avalia_senha")
 public class AvaliacaoSenhaController {
 
+    @Autowired
     private AvaliacaoSenhaService avaliacaoSenhaService;
 
     @PostMapping("/")

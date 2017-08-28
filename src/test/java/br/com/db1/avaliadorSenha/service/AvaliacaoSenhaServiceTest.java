@@ -91,10 +91,24 @@ public class AvaliacaoSenhaServiceTest {
     }
 
     @Test
-    public void pontuacaoDeveSer29_Shift123() throws Exception {
+    public void pontuacaoDeveSer29_ShiftAll123() throws Exception {
         String senha = "!@#";
         AvaliacaoSenha avaliacaoSenha = avaliacaoSenhaService.avaliarSenha(senha);
         Assert.assertEquals(29, avaliacaoSenha.getPontuacao().longValue());
+    }
+
+    @Test
+    public void pontuacaoDeveSer87_Shift1Aa11111() throws Exception {
+        String senha = "!Aa11111";
+        AvaliacaoSenha avaliacaoSenha = avaliacaoSenhaService.avaliarSenha(senha);
+        Assert.assertEquals(87, avaliacaoSenha.getPontuacao().longValue());
+    }
+
+    @Test
+    public void pontuacaoDeveSer100_Shifta1shift1B2shift2C3shift3() throws Exception {
+        String senha = "!a1!B2@C3#";
+        AvaliacaoSenha avaliacaoSenha = avaliacaoSenhaService.avaliarSenha(senha);
+        Assert.assertEquals(100, avaliacaoSenha.getPontuacao().longValue());
     }
 
 }

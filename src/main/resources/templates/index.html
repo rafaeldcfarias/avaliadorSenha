@@ -9,7 +9,7 @@
 <script>
     function avaliarSenha(target) {
         $.ajax({
-            url: ' http://localhost:8080/avalia_senha/',
+            url: 'https://avaliador-de-senha.herokuapp.com/avalia_senha/',
             data: {senha: target.value},
             dataType: 'json',
             type: 'Post',
